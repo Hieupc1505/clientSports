@@ -23,8 +23,8 @@ import {
 } from "../containts";
 
 import axios from "axios";
-// const server = "http://localhost:7500";
-const server = "https://league99.herokuapp.com";
+const server = "http://localhost:7500";
+// const server = "https://league99.herokuapp.com";
 
 export const getMatchTime = (nation) => async (dispatch) => {
     try {
@@ -110,7 +110,7 @@ export const getListVideo = (nation) => async (dispatch) => {
     try {
         dispatch({ type: LISTS_VIDEO_REQUEST });
         const { data } = await axios.get(
-            `http://localhost:7500/api/sports/${nation}/playlist`
+            `${server}/api/sports/${nation}/playlist`
         );
         // console.log(data);
         dispatch({
