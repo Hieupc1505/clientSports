@@ -23,7 +23,6 @@ import {
 } from "../containts";
 
 import axios from "axios";
-// const server = "http://localhost:7500";
 const server = "https://league99.herokuapp.com";
 
 export const getMatchTime = (nation) => async (dispatch) => {
