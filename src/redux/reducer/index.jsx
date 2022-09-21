@@ -31,7 +31,7 @@ export const sportReducer = (
         charts: [],
         statistics: [],
         loading: true,
-        nation: "france",
+        nation: "england",
         lists: [],
     },
     action
