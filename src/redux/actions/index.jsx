@@ -23,8 +23,8 @@ import {
 } from "../containts";
 
 import axios from "axios";
-// const server = "http://localhost:7500";
-const server = "https://league99.herokuapp.com";
+const server = "http://localhost:7500";
+// const server = "https://league99.herokuapp.com";
 
 export const getMatchTime = (nation) => async (dispatch) => {
     try {
@@ -66,27 +66,7 @@ export const getRound = (nation, roundId) => async (dispatch) => {
         });
     }
 };
-export const getHightLight = (nation) => async (dispatch) => {
-    try {
-        dispatch({ type: HIGHTLIGHT_REQUEST });
-        const { data } = await axios.get(
-            `${server}/api/sports/${nation}/hightlight`
-        );
-        dispatch({
-            type: HIGHTLIGHT_SUCCESS,
-        });
 
-        return data;
-    } catch (err) {
-        console.log(err);
-        dispatch({
-            type: HIGHTLIGHT_FAIL,
-            payload: {
-                err: err.response.data.mes,
-            },
-        });
-    }
-};
 export const getCharts = (nation, id) => async (dispatch) => {
     try {
         dispatch({ type: CHARTS_REQUEST });
