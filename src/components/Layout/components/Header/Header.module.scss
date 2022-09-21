@@ -1,0 +1,159 @@
+.wrapper {
+    --header-text-color: #fff;
+    height: auto;
+
+    //Premier league
+    // height: var(--default-layout-height, 60px);
+    // --header-background-color: #3f1052;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    //Seri-A
+
+    //Budesliga
+
+    //LaLiga
+
+    //Ligue 1
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: var(--header-background-color);
+    .header-bars {
+        margin-right: 16px;
+        cursor: pointer;
+        position: relative;
+    }
+}
+.header-logo-img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 10px;
+}
+
+.header-logo-text {
+    font-size: 2rem;
+    color: var(--header-text-color);
+}
+
+.header-lists {
+    // background-color: var(--header-background-color);
+    box-shadow: 0 3px 2px #171717;
+}
+.header-lists-inner {
+    // background-color: var(--header-background-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    a {
+        flex: 1;
+    }
+    li {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+.header-list-item {
+    display: block;
+    width: 150px;
+    padding: 16px 0 14px;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+.england {
+    background-color: #3f1052;
+    li {
+        color: #d0adf0;
+    }
+}
+.germany {
+    background-color: rgb(177, 40, 41);
+    li {
+        color: rgb(195 226 218);
+    }
+}
+.france {
+    background-color: rgba(0, 0, 0, 100%);
+    li {
+        color: white;
+    }
+}
+.spain {
+    background-color: rgb(76, 193, 239);
+    li {
+        color: white;
+    }
+}
+.italy {
+    background-color: rgb(22, 185, 154);
+    li {
+        color: rgb(255 255 255);
+    }
+}
+.vietnam {
+    background-color: rgb(218, 195, 28);
+    li {
+        color: rgb(255 255 255);
+    }
+}
+.c1 {
+    background-color: rgb(22, 46, 88);
+    li {
+        color: white;
+    }
+}
+.c2 {
+    background-color: rgb(234, 84, 95);
+    li {
+        color: white;
+    }
+}
+
+.header-list-item-active {
+    border-bottom-color: rgb(255, 128, 103);
+    border-bottom-color: #ad1b1b;
+    opacity: 1;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+.header-text-wrap {
+    display: flex;
+    align-items: center;
+}
+.list-league {
+    --min--width: 180px;
+    position: absolute;
+    top: 100%;
+    min-width: var(--min--width);
+    background-color: #3f1052;
+    left: calc(100% - var(--min--width));
+    border: 1px solid #333;
+    border-radius: 2px;
+    z-index: 5;
+    .league-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 10%);
+        font-size: 1.4rem;
+        &:hover {
+            background: rgba(255, 255, 255, 25%);
+        }
+    }
+    img {
+        width: 20px;
+        height: auto;
+    }
+}

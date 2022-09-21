@@ -1,0 +1,147 @@
+.wrapper {
+    padding: 0 5px;
+}
+
+.inner {
+    font-size: 12px;
+    color: #9aa0a6;
+    line-height: 14px;
+    background-color: #202124;
+    box-shadow: none;
+    border-radius: 0px;
+    padding-left: 17px;
+    padding-right: 15px;
+    padding-top: 17px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    margin-top: var(--header-height);
+}
+
+.inner-title {
+    padding-bottom: 8px;
+    color: #9aa0a6;
+    width: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    .drop-down-list {
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        top: calc(100% + 1px);
+        border-radius: 2px;
+        border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+    .drop-down-item {
+        text-align: left;
+        padding: 6px 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: #202124;
+        }
+    }
+}
+
+.inner-main {
+}
+
+.inner-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.inner-row {
+}
+
+.inner-row-title {
+}
+
+.inner-row-space {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    .inner-row-avata {
+        margin-top: 6px;
+        margin-right: 6px;
+        margin-left: 6px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            height: 42px;
+            aspect-ratio: auto 42 / 42;
+            width: 42px;
+            border-radius: 100%;
+        }
+    }
+    .inner-row-text {
+        margin-left: -23px;
+    }
+    .inner-row-info {
+        padding-left: 8px;
+    }
+
+    .inner-row-info-club-name {
+        display: flex;
+        align-items: normal;
+    }
+    span {
+        margin-right: 5px;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+.inner-row-info-name,
+.ttc {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.inner-row-tt {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    .inner-row-title {
+        color: #bdc1c6;
+        text-align: center;
+        width: 24px;
+    }
+    .inner-row-type {
+        padding-bottom: 0;
+    }
+}
+.inner-row-type {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    // padding-bottom: 8px;
+    color: #9aa0a6;
+    line-height: 10px;
+    width: 60px;
+}
+.ft-6 {
+    font-weight: 600;
+}
+
+.season-dropdow-text {
+    color: #4487f6;
+    font-size: 1.4rem;
+    line-height: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    .season-dropdown-icon {
+        border-style: solid;
+        border-width: 4px;
+        border-color: #4487f6 transparent transparent;
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 4px);
+        transform: translate(0, -37%);
+        cursor: pointer;
+    }
+}

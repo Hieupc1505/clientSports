@@ -1,0 +1,100 @@
+@media (max-width: 740px) {
+    .charts {
+        overflow-x: auto;
+    }
+    .charts-table {
+        position: relative;
+
+        tr td:nth-child(-n + 3):not(:first-child) {
+            position: sticky;
+            background-color: darkblue;
+            // border-bottom: 1px solid;
+        }
+        tr td:first-child {
+            width: 0;
+        }
+        tr td:nth-child(3) {
+            min-width: 110px;
+            border-bottom: 1px solid;
+        }
+        tr.charts-body-title {
+            th:first-child {
+                width: 0;
+            }
+            th:nth-child(2) {
+                position: relative;
+                width: 80px;
+            }
+            th:nth-child(3) {
+                position: absolute;
+                left: 4px;
+                div {
+                    padding: 10px;
+                }
+            }
+        }
+        .charts-row-form {
+            height: 32px;
+            padding: 0;
+        }
+    }
+
+    .charts-row-wrap {
+        .charts-row-form:nth-child(2) {
+            min-width: 80px;
+            max-width: 104px;
+        }
+    }
+    th.charts-row-form {
+        &:first-child {
+            width: auto;
+        }
+    }
+    @media (max-width: 540px) {
+        .charts-table {
+            tr th:nth-child(3) {
+                background: linear-gradient(
+                    178deg,
+                    rgb(16, 17, 18),
+                    rgb(25, 26, 28)
+                );
+            }
+            tr.charts-body-title {
+                th:nth-child(3) {
+                    position: fixed;
+                }
+            }
+        }
+    }
+    // .bridge {
+    //     width: 6px;
+
+    //     background: -webkit-linear-gradient(
+    //         right,
+    //         rgba(255, 255, 255, 0) 0%,
+    //         #e6e6e6 100%
+    //     );
+    //     bottom: 0;
+    //     pointer-events: none;
+    //     position: fixed;
+    //     right: auto;
+    //     top: 0;
+    //     z-index: 1;
+    // }
+    // @media (max-width: 550px) {
+    //     .bridge {
+    //         left: 190px;
+    //     }
+    // }
+}
+
+// Tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+@media (min-width: 740px) {
+}
+
+@media (min-width: 1113px) {
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+}

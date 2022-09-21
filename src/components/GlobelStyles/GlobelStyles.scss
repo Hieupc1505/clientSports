@@ -1,0 +1,48 @@
+@import "normalize.css";
+// @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500;8..144,700&display=swap");
+@import "./Responesive.scss";
+@import "./mainResponse.scss";
+:root {
+    --primary: #fe2c55;
+    --header-height: 134px;
+    //default layout
+    --default-layout-height: 60px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: #bdc1c6;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+.content-main {
+    max-width: 752px;
+    margin: 0 auto;
+    // background-color: rgba(0, 0, 0, 50%);
+}
+.content-center {
+    left: 50%;
+    position: absolute;
+    right: unset;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.h-134 {
+    margin-top: var(--header-height);
+}

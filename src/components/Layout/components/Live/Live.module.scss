@@ -1,0 +1,33 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.main-view {
+    width: 70%;
+    height: auto;
+    padding: 0 8px;
+}
+.main-bridge {
+    width: 90%;
+    margin: 0 auto;
+}
+.main-view-video {
+    width: 100%;
+    padding-top: 56.25% !important;
+    background-color: darkblue;
+}
+.box-option {
+    flex: 1;
+
+    .view-side-bar {
+        width: 100%;
+        padding: 6px 24px;
+    }
+    .view-side-bar-video {
+        width: 100%;
+        padding-top: 56.2% !important;
+        background-color: aqua;
+    }
+}
