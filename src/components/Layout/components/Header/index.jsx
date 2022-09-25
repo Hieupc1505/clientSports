@@ -164,9 +164,9 @@ const Header = () => {
                             THỐNG KÊ
                         </li>
                     </Link>
-                    <Link to="/news">
+                    <Link to="/lists">
                         <li
-                            route="new"
+                            route="lists"
                             className={cx("header-list-item", {
                                 "header-list-item-active": listTag[3],
                             })}

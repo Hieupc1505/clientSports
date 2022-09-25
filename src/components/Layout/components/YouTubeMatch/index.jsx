@@ -66,7 +66,12 @@ const YouTubeMatch = ({ slug, startMatch, handleClickVideo }) => {
                 body = (
                     <span
                         key={uuidv4()}
-                        onClick={() => handleClickVideo(item.snippet.videoId)}
+                        onClick={() =>
+                            handleClickVideo(
+                                item.snippet.videoId,
+                                `${home.name} - ${away.name}`
+                            )
+                        }
                         // href={`https://www.youtube.com/watch?v=${item.snippet.videoId}`}
                         // target="_blank"
                         // rel="noopener noreferrer"
@@ -84,8 +89,9 @@ const YouTubeMatch = ({ slug, startMatch, handleClickVideo }) => {
                     onClick={() =>
                         handleClickVideo(
                             null,
-                            list[nation].params.channelId,
+
                             `${home.name} - ${away.name}`,
+                            list[nation].params.channelId,
                             after
                         )
                     }

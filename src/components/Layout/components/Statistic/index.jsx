@@ -14,6 +14,7 @@ const Statistic = () => {
     const {
         statistics: { data },
         nation,
+        error,
     } = dataBySelector;
 
     const ele = useRef();
@@ -33,13 +34,13 @@ const Statistic = () => {
 
     const handleClickDoc = (e) => {
         // console.log(ele.current.contains(e.target));
-        if (!ele.current.contains(e.target) && flag) {
+        if (ele.current && !ele.current.contains(e.target) && flag) {
             onToggleFlag();
         }
     };
     useEffect(() => {
         onGetDispatch(getTopPlayers(nation));
-    }, [nation]);
+    }, [nation, error]);
     useEffect(() => {
         document.addEventListener("click", handleClickDoc);
         return () => document.removeEventListener("click", handleClickDoc);

@@ -1,8 +1,10 @@
 .wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100vh;
+    .view-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
 }
 .main-view {
     width: 70%;
@@ -17,17 +19,119 @@
     width: 100%;
     padding-top: 56.25% !important;
     background-color: darkblue;
+    position: relative;
+    overflow: hidden;
+    .main-frame {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
 }
 .box-option {
     flex: 1;
-
+    --color: rgb(234, 84, 95);
     .view-side-bar {
         width: 100%;
         padding: 6px 24px;
+        position: relative;
     }
     .view-side-bar-video {
         width: 100%;
         padding-top: 56.2% !important;
-        background-color: aqua;
+        background-color: var(--color);
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            background-color: var(--color);
+            filter: opacity(0.9);
+        }
+        cursor: pointer;
+        iframe {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
+    .view-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 5;
+}
+.list-tv {
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.6);
+    list-style: none;
+    border-radius: 8px;
+    width: 46%;
+    min-width: 360px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    box-shadow: 0 0 10px white, 0 0 15px white, 0 0 10px violet;
+    li.list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 12px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ddd;
+        }
+        img {
+            width: 24px;
+            vertical-align: middle;
+        }
+        .item-home img {
+            margin-right: 4px;
+        }
+        .item-away img {
+            margin-left: 4px;
+        }
+    }
+}
+.navi {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    .bars {
+        cursor: pointer;
+    }
+    .back {
+        top: 15px;
+        left: 14px;
+        cursor: pointer;
+        &:hover {
+            color: rgb(234, 84, 95);
+        }
+    }
+}
+.cancel {
+    position: absolute;
+    font-size: 27px;
+    color: white;
+    /* z-index: 4; */
+    top: 10px;
+    right: 14px;
+    cursor: pointer;
 }

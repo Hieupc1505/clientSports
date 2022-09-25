@@ -34,6 +34,7 @@ const Match = () => {
         loadingPre,
         loading,
         nation,
+        error,
     } = dataBySelector;
     // const [value, ]
     const handleScroll = async () => {
@@ -86,11 +87,11 @@ const Match = () => {
     // console.log(preRound.current);
     useEffect(() => {
         onGetDispatch(getMatchTime(nation));
-    }, [nation]);
+    }, [nation, error]);
 
     useEffect(() => {
-        setAfter((pre) => []);
-        setBefore((pre) => []);
+        setAfter(() => []);
+        setBefore(() => []);
     }, [nation]);
 
     useLayoutEffect(() => {

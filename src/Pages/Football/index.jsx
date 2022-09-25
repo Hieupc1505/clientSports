@@ -4,10 +4,6 @@ import React, { useEffect } from "react";
 const Football = ({ path, page }) => {
     const Page = page;
 
-    // const dispatch = useDispatch();
-    // useEffect(() => {
-    //     dispatch(initState());
-    // }, [path]);
     return <Page />;
 };
 

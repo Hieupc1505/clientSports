@@ -2,14 +2,22 @@ import React from "react";
 import ReactPlayer from "react-player/youtube";
 import { useSelector } from "react-redux";
 import { list as nations } from "../../../GlobelStyles/type";
-const VideoPlay = ({ url }) => {
+const VideoPlay = ({ url, setLinkVideo }) => {
     const { nation } = useSelector((state) => state.sport);
-    // const { list } = nations[nation].params;
-    // const arrUrl =
-    //     typeof url === "string"
-    //         ? `https://www.youtube.com/watch?v=${url}`
-    //         : url.map((item) => `https://www.youtube.com/watch?v=${item}`);
-    // console.log(arrUrl);
+    // const handleError = async () => {
+    //     let { data } = await axios({
+    //         method: "GET",
+    //         url: "https://www.googleapis.com/youtube/v3/search",
+    //         params: {
+    //             part: "snippet",
+    //             maxResults: "4",
+    //             key: "AIzaSyBle17ccjzisxuWTdnsX0sl0eLBWJMxFxI",
+    //             q,
+    //             publishedAfter,
+    //         },
+    //     });
+    //     console.log(data);
+    // };
     return (
         <div>
             {

@@ -20,9 +20,6 @@ import {
     LISTS_VIDEO_REQUEST,
     LISTS_VIDEO_FAIL,
     LISTS_VIDEO_SUCCESS,
-    HIGHTLIGHT_REQUEST,
-    HIGHTLIGHT_SUCCESS,
-    HIGHTLIGHT_FAIL,
 } from "../containts";
 export const sportReducer = (
     state = {
@@ -33,6 +30,7 @@ export const sportReducer = (
         loading: true,
         nation: "england",
         lists: [],
+        error: null,
     },
     action
 ) => {
@@ -48,13 +46,9 @@ export const sportReducer = (
                 loading: true,
                 nation: payload.nation,
                 lists: state.lists,
+                error: null,
             };
-        case HIGHTLIGHT_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-            };
-        case HIGHTLIGHT_REQUEST:
+
         case LISTS_VIDEO_REQUEST:
             return {
                 ...state,
@@ -66,7 +60,7 @@ export const sportReducer = (
                 loading: false,
                 lists: { ...state.lists, [payload.name]: payload.data },
             };
-        case HIGHTLIGHT_FAIL:
+
         case LISTS_VIDEO_FAIL:
             return {
                 ...state,
@@ -139,7 +133,7 @@ export const sportReducer = (
             return {
                 ...state,
                 loading: false,
-                errr: null,
+                error: null,
             };
         case INIT_STATE:
             return {

@@ -15,11 +15,12 @@ const Charts = () => {
     const {
         charts: { data, fiveMatch, season },
         nation,
+        error,
     } = dataBySelector;
 
     useLayoutEffect(() => {
         onGetDispatch(getCharts(nation, 0));
-    }, [nation]);
+    }, [nation, error]);
 
     const emptyMatch = (round) => {
         // console.log(round);

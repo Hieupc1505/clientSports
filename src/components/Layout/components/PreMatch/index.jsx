@@ -18,9 +18,12 @@ const PreMatch = ({ data, round, lRound, color }) => {
 
     const [flag, setFlag] = useState(false);
     const [url, setUrl] = useState(null);
+    const handleSetLink = (link) => {
+        setUrl(link);
+    };
     // const view = useRef();
     const handleClickVideo = useCallback(
-        async (url, channelId, q, publishedAfter) => {
+        async (url, q, channelId, publishedAfter) => {
             document.querySelector("body").style.overflow = "hidden";
             console.log(url);
 
@@ -745,7 +748,7 @@ const PreMatch = ({ data, round, lRound, color }) => {
                         <FontAwesomeIcon icon={faXmark} />
                     </div>
                     <div className={cx("video")}>
-                        <VideoPlay url={url} />
+                        <VideoPlay url={url} setLinkVideo={handleSetLink} />
                     </div>
                 </div>
             )}
