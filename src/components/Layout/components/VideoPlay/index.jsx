@@ -1,23 +1,10 @@
 import React from "react";
 import ReactPlayer from "react-player/youtube";
 import { useSelector } from "react-redux";
-import { list as nations } from "../../../GlobelStyles/type";
+// import { list as nations } from "../../../GlobelStyles/type";
 const VideoPlay = ({ url, setLinkVideo }) => {
     const { nation } = useSelector((state) => state.sport);
-    // const handleError = async () => {
-    //     let { data } = await axios({
-    //         method: "GET",
-    //         url: "https://www.googleapis.com/youtube/v3/search",
-    //         params: {
-    //             part: "snippet",
-    //             maxResults: "4",
-    //             key: "AIzaSyBle17ccjzisxuWTdnsX0sl0eLBWJMxFxI",
-    //             q,
-    //             publishedAfter,
-    //         },
-    //     });
-    //     console.log(data);
-    // };
+
     return (
         <div>
             {
@@ -29,6 +16,11 @@ const VideoPlay = ({ url, setLinkVideo }) => {
                         youtube: {
                             playerVars: { showinfo: 1 },
                         },
+                    }}
+                    height={"100%"}
+                    width={"100%"}
+                    style={{
+                        "max-height": "360px",
                     }}
                 />
             }

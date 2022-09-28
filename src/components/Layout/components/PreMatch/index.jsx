@@ -747,8 +747,10 @@ const PreMatch = ({ data, round, lRound, color }) => {
                     <div className={cx("cancel")} onClick={exitVideo}>
                         <FontAwesomeIcon icon={faXmark} />
                     </div>
-                    <div className={cx("video")}>
-                        <VideoPlay url={url} setLinkVideo={handleSetLink} />
+                    <div className={cx("box-video")}>
+                        <div className={cx("video")}>
+                            <VideoPlay url={url} setLinkVideo={handleSetLink} />
+                        </div>
                     </div>
                 </div>
             )}

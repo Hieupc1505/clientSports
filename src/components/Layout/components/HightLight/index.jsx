@@ -7,6 +7,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const cx = classNames.bind(styles);
+const server = "https://serverside88.herokuapp.com";
+// const server = "http://localhost:7500";
+// const server = "https://serversport98.herokuapp.com";
 
 const HightLight = () => {
     const navigate = useNavigate();
@@ -14,27 +17,21 @@ const HightLight = () => {
     const [vebo, setVebo] = useState([]);
     useEffect(
         () => async () => {
-            const { data } = await axios.get(
-                "https://serversport98.herokuapp.com/api/live-match"
-            );
+            const { data } = await axios.get(`${server}/api/live-match`);
             setData(() => data.live);
         },
         []
     );
     useEffect(
         () => async () => {
-            const { data } = await axios.get(
-                "https://serversport98.herokuapp.com/api/vebo"
-            );
+            const { data } = await axios.get(`${server}/api/vebo`);
             setVebo(() => data.live);
         },
         []
     );
     useEffect(() => {
         let timeout = setTimeout(async () => {
-            const { data } = await axios.get(
-                "https://serversport98.herokuapp.com/api/live-match"
-            );
+            const { data } = await axios.get(`${server}/api/live-match`);
             setData(() => data.live);
         }, 3 * 60 * 1000);
         return () => clearTimeout(timeout);
